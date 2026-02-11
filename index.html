@@ -4,36 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JobConnect Care</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background:#f4f7fb;
+background:linear-gradient(180deg,#e6f4ea,#d4f1f4);
 color:#1f2937;
-}
-
-.app{
-max-width:430px;
-margin:auto;
-background:white;
-min-height:100vh;
-position:relative;
-overflow-x:hidden;
-box-shadow:0 0 30px rgba(0,0,0,0.1);
+scroll-behavior:smooth;
 }
 
 .section{
 display:none;
 padding:20px;
-padding-bottom:90px;
-animation:fade 0.3s ease;
+padding-bottom:100px;
+animation:fade .3s ease-in-out;
 }
 
 .section.active{
@@ -41,179 +28,211 @@ display:block;
 }
 
 @keyframes fade{
-from{opacity:0; transform:translateY(10px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-.hero{
-background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800') center/cover;
-height:200px;
-border-radius:20px;
-color:white;
-padding:20px;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:18px;
-font-weight:700;
-}
-
-.hero p{
-font-size:13px;
-opacity:0.9;
-margin-top:5px;
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 .card{
-background:white;
+background:#ffffffcc;
+backdrop-filter:blur(10px);
 border-radius:18px;
-padding:15px;
-margin-bottom:15px;
+padding:18px;
+margin-bottom:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .card img{
 width:100%;
-height:150px;
-object-fit:cover;
-border-radius:15px;
-margin-bottom:10px;
+border-radius:14px;
+margin-bottom:12px;
 }
 
-button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:12px;
-background:linear-gradient(135deg,#2c5f2d,#4a90e2);
-color:white;
+h2{
+font-size:18px;
+margin-bottom:8px;
 font-weight:600;
-margin-top:10px;
+}
+
+p{
+font-size:14px;
+line-height:1.6;
+}
+
+.btn{
+display:block;
+text-align:center;
+margin-top:12px;
+padding:12px;
+border-radius:14px;
+background:linear-gradient(90deg,#2e7d32,#1976d2);
+color:white;
+font-weight:500;
+text-decoration:none;
 }
 
 .bottom-nav{
 position:fixed;
 bottom:0;
+left:0;
 width:100%;
-max-width:430px;
 background:white;
 display:flex;
 justify-content:space-around;
-padding:10px 0;
-box-shadow:0 -5px 20px rgba(0,0,0,0.1);
+padding:12px 0;
+border-top:1px solid #ddd;
+box-shadow:0 -5px 20px rgba(0,0,0,0.05);
 }
 
 .bottom-nav button{
 background:none;
-color:#2c5f2d;
-font-size:12px;
-font-weight:600;
-padding:5px;
+border:none;
+font-size:13px;
+font-weight:500;
+color:#2e7d32;
+}
+
+.bottom-nav button.active{
+background:#e6f4ea;
+padding:6px 14px;
+border-radius:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="app">
-
 <!-- HOME -->
 <div id="home" class="section active">
-<div class="hero">
-<h1>Bukan Sekadar Cari Kerja.</h1>
-<p>Kami bantu kamu menemukan arah karier.</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72">
+<h2>Bukan Sekadar Cari Kerja</h2>
+<p>Kami bantu kamu menemukan arah karier dengan pendekatan human-centered.</p>
+<a class="btn">Mulai Konseling</a>
 </div>
 
 <div class="card">
-<h3>Data & Value Proposition</h3>
-<p>Hampir 10 juta pemuda Indonesia berada dalam status NEET (BPS). Burnout dan pekerjaan non-standar menjadi risiko utama pekerja muda.</p>
+<h2>Data & Value Proposition</h2>
+<p>Hampir 10 juta pemuda Indonesia dalam status NEET (BPS). Burnout dan pekerjaan non-standar menjadi risiko utama pekerja muda.</p>
 </div>
 </div>
 
-<!-- REGISTER -->
-<div id="register" class="section">
+<!-- PROFILE -->
+<div id="profile" class="section">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800">
-<h3>Buat Profil Karier Anda</h3>
-<p>Kami hadir mendukung perjalanan karier Anda dengan empati.</p>
-<button>Simpan Profil</button>
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<h2>Buat Profil Karier Anda</h2>
+<p>Kami hadir untuk mendukung perjalanan karier Anda dengan empati.</p>
+<a class="btn">Simpan Profil</a>
+</div>
+
+<div class="card">
+<h2>Status</h2>
+<p>Fresh Graduate</p>
+<h2>Minat</h2>
+<p>Teknologi, Kesehatan, Pendidikan</p>
 </div>
 </div>
 
 <!-- HUB -->
 <div id="hub" class="section">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
-<h3>Career Counseling & Burnout Recovery</h3>
-<p>Sesi 1-on-1 untuk arah karier dan pemulihan burnout.</p>
-<button>Jadwalkan Sesi</button>
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+<h2>Career Counseling</h2>
+<p>Sesi 1-on-1 untuk arah karier dan burnout recovery.</p>
+<a class="btn">Jadwalkan</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800">
-<h3>Career Mapping & Assessment</h3>
-<button>Mulai Assessment</button>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<h2>Career Assessment</h2>
+<p>Mapping keterampilan dan kesiapan mental kerja.</p>
+<a class="btn">Mulai Assessment</a>
 </div>
 </div>
 
-<!-- PROGRAMS -->
+<!-- PROGRAM -->
 <div id="programs" class="section">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800">
-<h3>Fresh Graduate Guidance</h3>
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<h2>Fresh Graduate Program</h2>
+<p>Persiapan entry-level dan interview.</p>
 </div>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800">
-<h3>Career Re-entry</h3>
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<h2>Re-entry Program</h2>
+<p>Bangun kembali kepercayaan diri & skill update.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+<h2>Mentoring</h2>
+<p>Pelatihan dan mentoring karier.</p>
 </div>
 </div>
 
-<!-- OPPORTUNITIES -->
-<div id="opportunities" class="section">
+<!-- JOBS -->
+<div id="jobs" class="section">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800">
-<h3>TechCare Inc.</h3>
-<p>Budaya kolaboratif. Remote.</p>
-<button>Lihat Lowongan</button>
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<h2>TechCare Inc</h2>
+<p>Remote • Full Time • Mental Health Support</p>
+<a class="btn">Lihat Lowongan</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h2>EduGrow</h2>
+<p>Hybrid • Content Strategist</p>
+<a class="btn">Apply</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334">
+<h2>HealthTech ID</h2>
+<p>Onsite • HR Associate</p>
+<a class="btn">Apply</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+<h2>StartUp Nusantara</h2>
+<p>Remote • UI/UX Designer</p>
+<a class="btn">Apply</a>
 </div>
 </div>
 
-<!-- INSIGHTS -->
-<div id="insights" class="section">
+<!-- TESTIMONI -->
+<div id="testimoni" class="section">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800">
-<h3>Mengatasi Burnout</h3>
-</div>
+<img src="https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9">
+<h2>Rina - Product Designer</h2>
+<p>“Setelah ikut program mentoring, aku berhasil dapat kerja remote di startup Singapore.”</p>
 </div>
 
-<!-- ABOUT -->
-<div id="about" class="section">
 <div class="card">
-<h3>Tentang Kami</h3>
-<p>Membantu generasi muda menemukan karier bermakna.</p>
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
+<h2>Andi - Data Analyst</h2>
+<p>“Career mapping membantu aku memahami skill gap dan upgrade portfolio.”</p>
 </div>
 </div>
 
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
-<button onclick="show('home')">Home</button>
-<button onclick="show('register')">Profile</button>
+<button onclick="show('home')" class="active">Home</button>
+<button onclick="show('profile')">Profile</button>
 <button onclick="show('hub')">Hub</button>
 <button onclick="show('programs')">Programs</button>
-<button onclick="show('opportunities')">Jobs</button>
-</div>
-
+<button onclick="show('jobs')">Jobs</button>
+<button onclick="show('testimoni')">Testimoni</button>
 </div>
 
 <script>
 function show(id){
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.bottom-nav button').forEach(b=>b.classList.remove('active'));
 document.getElementById(id).classList.add('active');
-window.scrollTo({top:0,behavior:'smooth'});
+event.target.classList.add('active');
 }
 </script>
 
