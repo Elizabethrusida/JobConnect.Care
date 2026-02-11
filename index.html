@@ -11,67 +11,82 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background:linear-gradient(180deg,#e6f4ea,#d4f1f4);
-color:#1f2937;
-scroll-behavior:smooth;
+background:linear-gradient(135deg,#cde9d6,#d2e7f9);
+display:flex;
+justify-content:center;
+padding:20px 0;
+}
+
+/* Frame seperti HP */
+.app{
+width:100%;
+max-width:430px;
+background:#f8fbf9;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+position:relative;
+min-height:95vh;
 }
 
 .section{
 display:none;
 padding:20px;
 padding-bottom:100px;
-animation:fade .3s ease-in-out;
 }
 
 .section.active{
 display:block;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(10px);}
-to{opacity:1;transform:translateY(0);}
+h1{
+font-size:20px;
+margin-bottom:10px;
+font-weight:700;
+color:#1f3d2b;
+}
+
+h2{
+font-size:16px;
+margin-bottom:6px;
+font-weight:600;
+}
+
+p{
+font-size:13px;
+line-height:1.6;
+color:#374151;
 }
 
 .card{
-background:#ffffffcc;
-backdrop-filter:blur(10px);
+background:white;
 border-radius:18px;
-padding:18px;
-margin-bottom:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+padding:16px;
+margin-bottom:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
 .card img{
 width:100%;
 border-radius:14px;
-margin-bottom:12px;
-}
-
-h2{
-font-size:18px;
-margin-bottom:8px;
-font-weight:600;
-}
-
-p{
-font-size:14px;
-line-height:1.6;
+margin-bottom:10px;
 }
 
 .btn{
 display:block;
 text-align:center;
-margin-top:12px;
-padding:12px;
-border-radius:14px;
+margin-top:10px;
+padding:10px;
+border-radius:12px;
 background:linear-gradient(90deg,#2e7d32,#1976d2);
 color:white;
-font-weight:500;
+font-size:13px;
 text-decoration:none;
+font-weight:500;
 }
 
 .bottom-nav{
-position:fixed;
+position:absolute;
 bottom:0;
 left:0;
 width:100%;
@@ -79,21 +94,20 @@ background:white;
 display:flex;
 justify-content:space-around;
 padding:12px 0;
-border-top:1px solid #ddd;
-box-shadow:0 -5px 20px rgba(0,0,0,0.05);
+border-top:1px solid #eee;
 }
 
 .bottom-nav button{
 background:none;
 border:none;
-font-size:13px;
+font-size:11px;
 font-weight:500;
 color:#2e7d32;
 }
 
 .bottom-nav button.active{
 background:#e6f4ea;
-padding:6px 14px;
+padding:5px 12px;
 border-radius:20px;
 }
 </style>
@@ -101,40 +115,62 @@ border-radius:20px;
 
 <body>
 
+<div class="app">
+
 <!-- HOME -->
 <div id="home" class="section active">
+<h1>JobConnect.Care</h1>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72">
 <h2>Bukan Sekadar Cari Kerja</h2>
-<p>Kami bantu kamu menemukan arah karier dengan pendekatan human-centered.</p>
+<p>
+JobConnect.Care adalah platform pengembangan karier berbasis kesejahteraan. 
+Kami membantu generasi muda menemukan arah yang tepat sebelum masuk dunia kerja. 
+Bukan hanya placement, tetapi pemetaan potensi, kesiapan mental, dan strategi karier berkelanjutan.
+</p>
+<p style="margin-top:8px;">
+Kami percaya bahwa karier yang sehat dimulai dari pemahaman diri, 
+lingkungan kerja yang suportif, dan perencanaan yang realistis.
+</p>
 <a class="btn">Mulai Konseling</a>
 </div>
 
 <div class="card">
 <h2>Data & Value Proposition</h2>
-<p>Hampir 10 juta pemuda Indonesia dalam status NEET (BPS). Burnout dan pekerjaan non-standar menjadi risiko utama pekerja muda.</p>
+<p>
+Hampir 10 juta pemuda Indonesia berada dalam status NEET (BPS).
+Burnout dan pekerjaan non-standar menjadi risiko utama pekerja muda.
+Kami hadir dengan pendekatan career-first sebelum placement.
+</p>
 </div>
 </div>
 
 <!-- PROFILE -->
 <div id="profile" class="section">
+<h1>Profil Karier</h1>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<h2>Buat Profil Karier Anda</h2>
-<p>Kami hadir untuk mendukung perjalanan karier Anda dengan empati.</p>
-<a class="btn">Simpan Profil</a>
+<h2>Informasi Dasar</h2>
+<p>Status: Fresh Graduate</p>
+<p>Minat: Teknologi & Pendidikan</p>
+<p>Fokus: Remote-friendly company</p>
+<a class="btn">Edit Profil</a>
 </div>
 
 <div class="card">
-<h2>Status</h2>
-<p>Fresh Graduate</p>
-<h2>Minat</h2>
-<p>Teknologi, Kesehatan, Pendidikan</p>
+<h2>Progress Karier</h2>
+<p>✔ Career Mapping Selesai</p>
+<p>✔ CV Review</p>
+<p>⬜ Interview Simulation</p>
 </div>
 </div>
 
 <!-- HUB -->
 <div id="hub" class="section">
+<h1>Career Hub</h1>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
 <h2>Career Counseling</h2>
@@ -143,77 +179,68 @@ border-radius:20px;
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<h2>Career Assessment</h2>
-<p>Mapping keterampilan dan kesiapan mental kerja.</p>
-<a class="btn">Mulai Assessment</a>
+<h2>Assessment</h2>
+<p>Mapping skill, kesiapan mental, dan jalur karier ideal.</p>
+<a class="btn">Mulai</a>
 </div>
 </div>
 
-<!-- PROGRAM -->
+<!-- PROGRAMS -->
 <div id="programs" class="section">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<h2>Fresh Graduate Program</h2>
-<p>Persiapan entry-level dan interview.</p>
-</div>
+<h1>Program Kami</h1>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<h2>Re-entry Program</h2>
-<p>Bangun kembali kepercayaan diri & skill update.</p>
+<h2>Fresh Graduate Program</h2>
+<p>Persiapan entry-level dan simulasi interview.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-<h2>Mentoring</h2>
-<p>Pelatihan dan mentoring karier.</p>
+<h2>Re-entry Program</h2>
+<p>Bangun kembali kepercayaan diri dan update skill.</p>
 </div>
 </div>
 
 <!-- JOBS -->
 <div id="jobs" class="section">
+<h1>Opportunity Hub</h1>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
 <h2>TechCare Inc</h2>
-<p>Remote • Full Time • Mental Health Support</p>
-<a class="btn">Lihat Lowongan</a>
+<p>Remote • UI/UX Designer • Mental Health Support</p>
+<a class="btn">Apply</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <h2>EduGrow</h2>
 <p>Hybrid • Content Strategist</p>
 <a class="btn">Apply</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334">
 <h2>HealthTech ID</h2>
 <p>Onsite • HR Associate</p>
-<a class="btn">Apply</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
-<h2>StartUp Nusantara</h2>
-<p>Remote • UI/UX Designer</p>
 <a class="btn">Apply</a>
 </div>
 </div>
 
 <!-- TESTIMONI -->
 <div id="testimoni" class="section">
+<h1>Testimoni</h1>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9">
 <h2>Rina - Product Designer</h2>
-<p>“Setelah ikut program mentoring, aku berhasil dapat kerja remote di startup Singapore.”</p>
+<p>
+Setelah ikut mentoring, saya berhasil mendapatkan kerja remote di startup luar negeri.
+</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
 <h2>Andi - Data Analyst</h2>
-<p>“Career mapping membantu aku memahami skill gap dan upgrade portfolio.”</p>
+<p>
+Career mapping membantu saya memahami skill gap dan meningkatkan portfolio.
+</p>
 </div>
 </div>
 
@@ -224,7 +251,9 @@ border-radius:20px;
 <button onclick="show('hub')">Hub</button>
 <button onclick="show('programs')">Programs</button>
 <button onclick="show('jobs')">Jobs</button>
-<button onclick="show('testimoni')">Testimoni</button>
+<button onclick="show('testimoni')">Review</button>
+</div>
+
 </div>
 
 <script>
